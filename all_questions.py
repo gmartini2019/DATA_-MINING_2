@@ -8,7 +8,12 @@ import utils as u
 # See the file INSTRUCTIONS.md
 # ----------------------------------------------------------------------
 
+def entropy(left, right):
+    tot = left+right
+    split_left = left/tot
+    split_right = right/tot
 
+    return -((split_left*u.log2(split_left)) + (split_right*u.log2(split_right)))
 def question1():
     """
     Note 1: Each attribute can appear as a node in the tree AT MOST once.
@@ -23,34 +28,36 @@ def question1():
     level2_left = {}
     level2_right = {}
 
+
+
     level1["smoking"] = 1.0
     level1["smoking_info_gain"] = 0.2780719051126377
 
-    level1["cough"] = -1
+    level1["cough"] = entropy(5,5)
     level1["cough_info_gain"] = 0.034851554559677034
 
-    level1["radon"] = -1
+    level1["radon"] = entropy(5,5)
     level1["radon_info_gain"] = 0.2364527976600279
 
-    level1["weight_loss"] = -1
+    level1["weight_loss"] = entropy(5,5)
     level1["weight_loss_info_gain"] = 0.02904940554533142
 
     level2_left["smoking"] = -1
-    level2_left["smoking_info_gain"] = 0
+    level2_left["smoking_info_gain"] = -1
 
     level2_right["smoking"] = -1
-    level2_right["smoking_info_gain"] = 0
+    level2_right["smoking_info_gain"] = -1
 
     level2_left["radon"] = -1
-    level2_left["radon_info_gain"] = 0
+    level2_left["radon_info_gain"] = -1
 
-    level2_left["cough"] = 1.0
+    level2_left["cough"] = entropy(4,1)
     level2_left["cough_info_gain"] = 0.7219280948873623
 
     level2_left["weight_loss"] = -1
     level2_left["weight_loss_info_gain"] = -1
 
-    level2_right["radon"] = 1.0
+    level2_right["radon"] = entropy(1,4)
     level2_right["radon_info_gain"] = 0.7219280948873623
 
     level2_right["cough"] = -1
