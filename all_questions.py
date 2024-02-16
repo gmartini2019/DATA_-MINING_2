@@ -78,11 +78,7 @@ def question1():
     cough = tree.insert_left('Chronic Cough')
     radon = tree.insert_left('Radon Exposure')
 
-    cough.insert_right(1)
-    cough.insert_left(4)
 
-    radon.insert_left(1)
-    radon.insert_right(4)
     answer["tree"] = tree  
     answer["training_error"] = 0.0  
 
