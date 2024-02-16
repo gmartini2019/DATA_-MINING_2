@@ -42,29 +42,29 @@ def question1():
     level1["weight_loss"] = entropy(5,5)
     level1["weight_loss_info_gain"] = 0.02904940554533142
 
-    level2_left["smoking"] = -1
-    level2_left["smoking_info_gain"] = -1
+    level2_left["smoking"] = -1.0
+    level2_left["smoking_info_gain"] = -1.0
 
-    level2_right["smoking"] = -1
-    level2_right["smoking_info_gain"] = -1
+    level2_right["smoking"] = -1.0
+    level2_right["smoking_info_gain"] = -1.0
 
-    level2_left["radon"] = -1
-    level2_left["radon_info_gain"] = -1
+    level2_left["radon"] = -1.0
+    level2_left["radon_info_gain"] = -1.0
 
     level2_left["cough"] = entropy(4,1)
     level2_left["cough_info_gain"] = 0.7219280948873623
 
-    level2_left["weight_loss"] = -1
-    level2_left["weight_loss_info_gain"] = -1
+    level2_left["weight_loss"] = -1.0
+    level2_left["weight_loss_info_gain"] = -1.0
 
     level2_right["radon"] = entropy(1,4)
     level2_right["radon_info_gain"] = 0.7219280948873623
 
-    level2_right["cough"] = -1
-    level2_right["cough_info_gain"] = -1
+    level2_right["cough"] = -1.0
+    level2_right["cough_info_gain"] = -1.0
 
-    level2_right["weight_loss"] = -1
-    level2_right["weight_loss_info_gain"] = -1
+    level2_right["weight_loss"] =-1.0
+    level2_right["weight_loss_info_gain"] = -1.0
 
     answer["level1"] = level1
     answer["level2_left"] = level2_left
@@ -100,9 +100,9 @@ def question2():
 
     answer["(a) entropy_entire_data"] = 1.4253642047367425
 
-    answer["(b) x <= 0.2"] = 0.17739286055515824
-    answer["(b) x <= 0.7"] = 0.3557029418697566
-    answer["(b) y <= 0.6"] = 0.34781842724338197
+    answer["(b) x < 0.2"] = 0.17739286055515824
+    answer["(b) x < 0.7"] = 0.3557029418697566
+    answer["(b) y < 0.6"] = 0.34781842724338197
 
     # choose one of 'x=0.2', 'x=0.7', or 'x=0.6'
     answer["(c) attribute"] = "y=0.6"  
